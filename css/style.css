@@ -5,6 +5,7 @@
   --darken-red: #B32B34;
   --hover-red: #CA2C37;
   --error-red: #BA2732;
+  --logo-dark: #8C2027;
 
   --basic-green: #63A63E;
   --special-greenlight: #8ED78F;
@@ -38,6 +39,8 @@
   --special-blue: #3BBCE3;
 
   --special-lilac: #DC91D8;
+
+  --social-dark: #212A3A;
 }
 
 /*--Global*/
@@ -121,6 +124,36 @@ h3 {
 
 .header-top {
   background-color: var(--darken-grey);
+}
+
+.user-logo {
+  width: 220px;
+  height: 42px;
+  background-color: var(--basic-red);
+  background-image: url(../img/logo-technomart.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0px 5px var(--darken-red);
+}
+
+.user-logo:active {
+  background-color: var(--error-red);
+  box-shadow: 0px 5px var(--logo-dark);
+}
+
+.footer-user-logo {
+  width: 220px;
+  height: 68px;
+  background-color: var(--basic-red);
+  background-image: url(../img/logo-technomart1.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0px 5px var(--darken-red);
+}
+
+.footer-user-logo:active {
+  background-color: var(--error-red);
+  box-shadow: 0px 5px var(--logo-dark);
 }
 
 .search:focus {
@@ -493,13 +526,59 @@ h3 {
 /*--social-button--*/
 /* стилизация*/
 
-.social-button:hover {
-  color: var(--basic-red);
+.social-list {
+  display: flex;
+  width: 145px;
+  height: auto;
 }
 
-.social-button:active {
-  color: var(--basic-red);
+.social-item {
+  font-size: 0;
 }
+
+.social-button {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  margin-right: 3px;
+  background-color: var(--social-dark);
+  border-radius: 50%;
+}
+
+.vk {
+  background-image: url(../img/icon-vk.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.fb {
+  background-image: url(../img/icon-fb.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.inst {
+  background-image: url(../img/icon-insta.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.vk:hover,
+.fb:hover,
+.inst:hover {
+  background-color: var(--basic-red);
+}
+
+.vk:active,
+.fb:active,
+.inst:active {
+  background-color: var(--basic-red);
+  transform: scale(0.95);
+}
+
+
+
+
 
 .feedback,
 .social-list a {
