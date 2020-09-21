@@ -27,11 +27,22 @@
             <p class='user-logo'></p>
            <!-- <img src='img/logo.png' width='220' height='47' alt='Логотип магазина'>-->
           </a>
-          <form class='search' action='' method='post'>
-            <label class='search'>Поиск:<input type='search' name='search' placehholder='Поиск по сайту'></label>
+          <form action='' method='post'>
+            <label class='search'><svg class='searching' width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill=""/>
+              </svg>
+              Поиск:<input type='search' name='search' placeholder=''></label>
           </form>
-          <a class='bookmark' href='blank.html'>Закладки: 0</a>
-          <a class='cart' href='blank.html'>Корзина: 0</a>
+          <a class='bookmark' href='blank.html'><svg class='book' width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z" fill="white"/>
+            </svg>
+            Закладки: 0</a>
+          <a class='cart' href='blank.html'><svg class='carts' width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
+            <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
+            <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
+            </svg>
+            Корзина: 0</a>
           <button class='order' type='button'>Офорить заказ</button>
         </div>
       </section>
@@ -44,10 +55,14 @@
         </p>
         </div>
         <div class='contact'>
-          <p><a class='phone' href='tel:+7(812)555-05-55'>+7(812)555-05-55</a></p>
+          <p><a class='phone' href='tel:+7(812)555-05-55'><img src='img/icon-phone.svg' width='19' height='19' alt='user'>+7(812)555-05-55</a></p>
           <p class='address'>г.Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</p>
         </div>
-        <p><a class='login-link' href='blank.html'>Войти</a></p>
+        <p><a class='login-link' href='blank.html'><svg class='enter' width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill=""/>
+          <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" fill=""/>
+          </svg>
+          Войти</a></p>
         <p><a class='registration' href='blank.html'>Регистрация</a></p>
       </section>
       <nav class='main-navigation container'>
@@ -166,12 +181,38 @@
         <img src='img/car-delivery.svg' width='468' height='261' alt='Машина доставки'>
       </section>
 
+      <section class='about container'>
+        <div class='about'>
+        <h2>Компания &laquo;Техномарт&raquo;</h2>
+        <p class='shopping'>
+          Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит 
+          равнодушными любителей сэкономить на гастарбайтерах.
+        </p>
+        <p class='shopping'>
+          Мы сможем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
+        </p>
+        <p class='delivery-line'>Деловые линии</p>
+        <p class='delivery-line'>Автотрейдинг</p>
+        <p class='delivery-line'>ЖелДорЭкспедиция</p>
+        <p><a class='button-link' href='#'>Подробнее о компании</a></p>
+        </div>
+        <div class='contact'>
+          <h2>Контакты</h2>
+          <p class='shopping'>Вы можете забрать товар сами, заехав в наш офис:</p>
+          <div class='map'>
+            <a href="https://yandex.ru/maps/?um=constructor%3A03438ab9c7128bd0aeafe46cd67ac9d81a2be5f1cbda35fa24cf63211fb40d77&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A03438ab9c7128bd0aeafe46cd67ac9d81a2be5f1cbda35fa24cf63211fb40d77&amp;width=300&amp;height=158&amp;lang=ru_RU" alt="Адрес 'Техномарта'" style="border: 0;" /></a>
+          </div>
+          <p><a class='button-link' href='#'>Заблудились? Напишите нам!</a></p>
+        </div>
+      </section>
+<!--
       <section class='maps'>
         <div class='map'>
           <script class='piter' type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aef3c125b63873fa8b7611d6285a02e73f616d463e638bc1935b1f33e222df969&amp;width=943&amp;height=449&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
-        <!--Форма для отправки сообщения    Понятия не имею как это делать!-->
-      </section>    
+        <!--Форма для отправки сообщения    Понятия не имею как это делать!
+      </section>   --> 
+
     </main>
 
     <footer class='page-footer main-footer'>
@@ -190,7 +231,7 @@
       </section>
       <section class='footer-middle container'>
         <div class='footer-contact'>
-          <p class='footer-address'>г.Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</p>
+          <p class='footer-address'>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <p><a class='footer-phone' href='tel:+7(812)555-05-55'>+7(812)555-05-55</a></p>
         </div>
         <ul class='footer-goods'>
@@ -227,37 +268,68 @@
     </footer>
 
 
-    <section class='modal model-login'>
+    <section class='modal model-registration container'>
       <h2>Регистрация</h2>
-      <p>Ваш логин(email):</p>
-      <p>Пароль</p>
+      <form class='form-registration' action='https://echo.htmlacademy.ru' method='post'>
+        <p>
+         <label class='registration' for='registration-login' >Ваш логин(email):</label>
+         <input class='registration-input' type='email' name='login' id='registration-login' placeholder='email@example.com' required>
+       </p>
+       <p>
+          <label class='registration' for='registration-password'>Пароль</label>
+          <input class='registration-input' type='password' name='password' id='registration-password' placeholder='*******' required>
+        </p>
       <button class='button-registration' type='submit'>Зарегистрироваться</button>
+      </form>
     </section>
 
-    <section class='modal modal-enter'>
+
+    <section class='modal modal-enter container'>
       <h2>Личный кабинет</h2>
       <p class='modal-text'>Введите пожалуйста свой логин и пароль</p>
-      <!-- Здесь будет форма логина -->
-      <button class='modal-close' type='button'>Закрыть</button>
+      <form class='form-login' action='https://echo.htmlacademy.ru' method='post'>
+        <p>
+          <label class='enter-label' for='enter-login'>Логин</label>
+          <input class='enter-input' type='email' name='login' id='enter-login' placeholder='email@example.com' required>
+        </p>
+        <p>
+          <label class='enter-password' for='enter-password'>Пароль</label>
+          <input class='enter-input' type='password' name='password' id='enter-password' placeholder='*******' required>
+        </p>
+      <button class='button-enter' type='submit'>Войти</button>
+      </form>
     </section>
+
     
-    <section class='modal modal-message'>
-      <h2>Напишите нам</h2>
-      <p>Ваше имя:</p>
-      <p>Ваш e-mail:</p>
-      <p>Текст письма:</p>
-      <button class='button-link' type='submit'>Отправить</button>
-      <button class='modal-close' type='button'>Закрыть</button>
+    <section class='modal modal-message container'>
+      <h2 class='visually-hidden'>Напишите нам</h2> <!--hidden-->
+      <form class='form-message' action='https://echo.htmlacademy.ru' method='post'>
+        <p class='message-name'>
+          <label class='write-us-name' for='write-us-login'>Ваше имя:</label>
+          <input class='write-us-input' type='text' name='login' id='write-us-login' placeholder='Имя Фамилия' required>
+        </p>
+        <p class='message-email'>
+          <label class='write-us-email' for='write-us-email'>Ваш email:</label>
+          <input class='write-us-input' type='email' name='email' id='write-us-email' placeholder='email@example.com' required>
+        </p>
+        <p class='message-text'>Текст письма:</p>
+        <p><textarea rows='5' cols='50' name='message' required>В свободной форме</textarea></p>
+        <button class='button-link' type='submit'>Отправить</button>
+        <button class='modal-close' type='button'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'</button>
+      </form>
     </section>
 
-    <section class='modal modal-cart'>
+    <section class='modal modal-cart container'>
       <h2>Корзина</h2>
-      <button class='modal-close' type='button'>Закрыть</button>
+      <button class='modal-close' type='button'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'</button>
     </section>
 
-    <section class='modal modal-maps'>
-      <h2>Карта</h2>
-      <button class='modal-close' type='button'>Закрыть</button>
+    <section class='modal modal-maps container'>
+      <h2 visually-hidden>Карта</h2>  <!--hidden-->
+      <div class='map-yandex'>
+        <script class='piter' type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aef3c125b63873fa8b7611d6285a02e73f616d463e638bc1935b1f33e222df969&amp;width=943&amp;height=449&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+      <button class='modal-close' type='button'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'</button>
     </section>
 
 
