@@ -43,6 +43,7 @@
   --special-lilac: #DC91D8;
 
   --social-dark: #212A3A;
+  --card-button: rgba(255,255,255, 0.3);
   --cart-icon-dark: rgba(255, 255, 255, 0.5);
   --basic-shadow: rgba(0, 0, 0, 0.25);
   --dark-shadow: rgba(0, 0, 0, 0.15);
@@ -56,7 +57,7 @@
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: Cuprum, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   line-height: 24px; 
   font-style: normal;
@@ -83,7 +84,7 @@ h2 {
 h3 {
   width: 185px;
   height: 143px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-style: normal;
@@ -95,7 +96,7 @@ h3 {
 .old-price {
   width: 65px;
   height: 18px;
-  font-family: PT Sans, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-style: normal;
@@ -109,7 +110,7 @@ h3 {
 .pentagon {
   width: 141px;
   height:38px;
-  font-family: PT Sans, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-style: normal;
@@ -217,7 +218,7 @@ h3 {
 
 
 .order {
-  font-family: 'Cuprum', PT Sans, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-style: normal;
@@ -231,13 +232,13 @@ h3 {
 }
 
 .order:active {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--cart-icon-dark);
 }
 
 /*--header-middle--*/
 
 .site-title {
-  font-family: 'Cuprum', PT Sans, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -368,11 +369,16 @@ h3 {
     section goods--*/
 
 .goods h3 {
-  font-family: Cuprum, sans-serif;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 23px; top: 20px;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-style: normal;
   font-weight: bold;
+  text-align: left;
   color: var(--basic-white);
 }
 
@@ -382,33 +388,60 @@ h3 {
   list-style: none;
 }
 
+.goods-item {
+  width: 300px;
+  height: 123px;
+}
+
 .material {
+  position: relative;
+  background-image: url(../img/icon-1.svg);
+  background-repeat: no-repeat;
+  background-position: 213px 31px;
   background-color: var(--special-yellow);
 }
 
 .tools {
+  position: relative;
+  background-image: url(../img/icon-2.svg);
+  background-repeat: no-repeat;
+  background-position: 194px 34px;
   background-color: var(--special-blue);
 }
 
 .equipment {
+  position: relative;
+  background-image: url(../img/icon-3.svg);
+  background-repeat: no-repeat;
+  background-position: 191px 31px;
   background-color: var(--special-lilac);
 }
 
 .discount {
+  position: relative;
+  background-image: url(../img/icon-4.svg);
+  background-repeat: no-repeat;
+  background-position: 196px 26px;
   background-color: var(--special-greenlight);
 }
 
 .delivery {
+  position: relative;
+  background-image: url(../img/icon-5.svg);
+  background-repeat: no-repeat;
+  background-position: 191px 32px;
   background-color: var(--goods-yellow);
 }
 
 .goods-button {
+  position: absolute;
   display: block;
+  left: 23px; top: 64px;
   width: 135px;
   height: 38px;
-  font-family: Cuprum, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 38px;
   font-style: normal;
   font-weight: normal;
   text-align: center;
@@ -416,9 +449,11 @@ h3 {
   color: var(--basic-white);
   /*filter: drop-shadow(0px 4px 4px var(--basic-shadow));*/
 
-  background-color: var(--basic-white);
-  opacity: 0.3;
+  background-color: var(--card-button);
+  /*opacity: 0.3;*/
 }
+
+
 
 /*--popular goods--*/
 
@@ -437,7 +472,7 @@ h3 {
   display: block;
   width: 192px;
   height: 38px;
-  font-family: Cuprum, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -494,7 +529,7 @@ h3 {
 
 .service,
 .service_delivery {
-  font-family: PT Sans, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-style: normal;
@@ -514,7 +549,7 @@ h3 {
   margin: 0;
   width: 240px;
   height:61px;
-  font-family: Cuprum, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 21px;
   line-height: 30px;
   font-style: normal;
@@ -539,7 +574,7 @@ h3 {
 .slider-delivery:active,
 .guarantee:active,
 .credit:active {
-  color:var(--dark-grey);
+  color: var(--dark-grey);
   background-color: var(--basic-white);
 }
 
@@ -550,7 +585,7 @@ h3 {
 } 
 
 .shopping {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-style: normal;
@@ -559,7 +594,7 @@ h3 {
 }
 
 .delivery-line {
-  font-family: Cuprum, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-style: normal;
@@ -586,7 +621,7 @@ h3 {
 .page-footer {
   margin: 0;
   padding: 0;
-  font-family: Cuprum, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-style: normal;
@@ -727,7 +762,7 @@ h3 {
 /*--Catalog--*/
 
 .page-catalog {
-  font-family: PT Sans, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-style: normal;
@@ -735,7 +770,7 @@ h3 {
 }
 
 .page-catalog h2 {
-  font-family: Cuprum, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-style: normal;
@@ -946,7 +981,7 @@ h3 {
 }
 
 .content h2 {
-  font-family: Cuprum, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-style: normal;
@@ -993,6 +1028,6 @@ h3 {
 }
 
 .modal-close {
-  background-color:transparent;
+  background-color: transparent;
   border: none;
 }
