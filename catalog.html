@@ -38,7 +38,7 @@
           <button class='order' type='button'>Офорить заказ</button>
         </div>
       </section>
-      <section class='header-middle container'>
+      <section class='header-middle header-middle-catalog container'>
         <h1 class='title visually-hidden'>Интернет-магазин строительных материалов и инструментов для ремонта</h1>  <!--hidden-->
         <div class='site-title'>
           <p>Интернет-магазин
@@ -47,19 +47,21 @@
         </p>
         </div>
         <div class='contact'>
-          <p><a class='phone' href='tel:+7(812)555-05-55'><img src='img/icon-phone.svg' width='19' height='19' alt='user'>+7(812)555-05-55</a></p>
-          <p class='address'>г.Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</p>
+          <p class='phone'><a href='tel:+7(812)555-05-55'><img src='img/icon-phone.svg' width='19' height='19' alt='user'>+7(812)555-05-55</a></p>
+          <p class='address'>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <p><a class='name' href='blank.html'><svg class='names' width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.881 14.166C15.737 13.431 13.625 12.5 12.674 11.776C12.017 11.275 11.904 10.158 12.157 9.361C13.275 8.458 14.021 6.884 14.021 5.083C14.021 2.276 12.221 0 10 0C7.77902 0 5.97901 2.276 5.97901 5.083C5.97901 6.884 6.72501 8.457 7.84201 9.36C8.09501 10.158 7.98302 11.275 7.32502 11.776C6.37502 12.5 4.26201 13.43 2.11801 14.166C-0.0259852 14.902 1.48343e-05 18 1.48343e-05 18H20C20 18 20.025 14.901 17.881 14.166Z" fill=""/>
-          </svg>
-          Равшан Джамшутович<svg class='exit' width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 9L11.125 0.5V6.5H5.125V11.5H11.125V17.5L20 9Z" fill=""/>
-            <path d="M2.10601 14.452V3.548C2.12401 3.172 2.27701 2.491 3.11601 2.491H8.14301V0.5H3.11601C0.938006 0.5 0.112006 2.31 0.0870056 3.527V14.473C0.112006 15.689 0.938006 17.5 3.11601 17.5H8.14301V15.51H3.11601C2.27701 15.51 2.12401 14.827 2.10601 14.452Z" fill=""/>
+        <div class='catalog-person'>
+          <p><a class='name' href='blank.html'><svg class='names' width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.881 14.166C15.737 13.431 13.625 12.5 12.674 11.776C12.017 11.275 11.904 10.158 12.157 9.361C13.275 8.458 14.021 6.884 14.021 5.083C14.021 2.276 12.221 0 10 0C7.77902 0 5.97901 2.276 5.97901 5.083C5.97901 6.884 6.72501 8.457 7.84201 9.36C8.09501 10.158 7.98302 11.275 7.32502 11.776C6.37502 12.5 4.26201 13.43 2.11801 14.166C-0.0259852 14.902 1.48343e-05 18 1.48343e-05 18H20C20 18 20.025 14.901 17.881 14.166Z" fill=""/>
             </svg>
-            </a></p>
-        <p><a class='orders' href='blank.html'>Мои заказы</a></p>
-        <p><a class='my-account' href='blank.html'>Личный кабинет</a></p>
+            Равшан Джамшутович<svg class='exit' width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 9L11.125 0.5V6.5H5.125V11.5H11.125V17.5L20 9Z" fill=""/>
+              <path d="M2.10601 14.452V3.548C2.12401 3.172 2.27701 2.491 3.11601 2.491H8.14301V0.5H3.11601C0.938006 0.5 0.112006 2.31 0.0870056 3.527V14.473C0.112006 15.689 0.938006 17.5 3.11601 17.5H8.14301V15.51H3.11601C2.27701 15.51 2.12401 14.827 2.10601 14.452Z" fill=""/>
+              </svg>
+              </a></p>
+          <p><a class='orders' href='blank.html'>Мои заказы</a></p>
+          <p><a class='my-account' href='blank.html'>Личный кабинет</a></p>
+        </div>
       </section>
       <nav class='main-navigation container'>
         <ul class='site-navigation'>
@@ -75,7 +77,7 @@
     </header>
 
     <main class='page-catalog container'>
-      <h2>Перфораторы</h2>
+      <h2 class='catalog-title'>Перфораторы</h2>
       <ul class='perforator-list'>
         <li>
           <a href='index.html'><img src='img/icon-home.svg'></a><img class='right-small' src='img/icon-right-small.svg' width='8' height='12' alt='Right-small'>
@@ -91,7 +93,7 @@
         </li>
       </ul>
       <section class='filter'>
-        <h2 classs='visually-hidden'>Фильтр товаров</h2>   <!--hidden-->
+      <!--  <h2 classs='visually-hidden'>Фильтр товаров</h2>-->   <!--hidden-->
         <h3>Фильтр:</h3>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset class='filter-price'>
@@ -141,7 +143,7 @@
       </section>
 
       <section class='assortment'>
-        <h2>Сортировка товаров</h2>  <!--hidden-->
+       <!-- <h2 class='visually-hidden'>Сортировка товаров</h2>-->  <!--hidden-->
         <h3>Сортировка:</h3>
         <p><span>По цене<span></p>
         <p><span>По тип</span></p>
@@ -158,7 +160,7 @@
           </div>
       </section>
       <section class='catalog'>
-        <h2 class='visually-hidden'>Страница перфораторов</h2>  <!--hidden-->
+     <!--<h2 class='visually-hidden'>Страница перфораторов</h2>-->          <!--hidden-->
         <ul class='catalog-list'>
           <li class='catalog-item'>
             <div class='catalog-picture'>              
@@ -169,10 +171,10 @@
             </div>
             <p class='old-price'>30500 P.</p>
             <p class='pentagon'>25500 P.</p>
-            <div class='catalog-hidden'>
+           <!-- <div class='catalog-hidden'>
               <button class='buy' type='button'><img src='img/icon-cart.svg' width='15' height='15' alt='Cart'>Купить</button>
               <button class='into-bookmarks' type='button'>В закладки</button>
-            </div>
+            </div>-->
           </li>
           <li class='catalog-item'>
             <a href='blank.html'>
@@ -239,15 +241,18 @@
             <p class='pentagon'>12500 P.</p>
           </li>
         </ul>
-        <ul class='pagination-list'>
-          <li class='pagination-item pagination-item-current'><a>1</a></li>
-          <li class='pagination-item'><a href="#">2</a></li>
-          <li class='pagination-item'><a href="#">3</a></li>
-        </ul>
+        <div class='pages-button'>
+          <ul class='pagination-list'>
+            <li class='pagination-item pagination-item-current'><a>1</a></li>
+            <li class='pagination-item'><a href="#">2</a></li>
+            <li class='pagination-item'><a href="#">3</a></li>
+          </ul>
         <button class='pagination-button' type='button'>Следующая</button>
+        </div>
       </section>
-      <section class='content'>
-        <h2>Пара слов о перфораторах</h2>
+      
+      <section class='content container'>
+        <h2 class='two-words'>Пара слов о перфораторах</h2>
         <div class='catalog-text'>
           <p>Перфоратор-универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и 
@@ -257,8 +262,9 @@
           ударная дрель.
           </p>
         </div>
-      </section>    
-    </main>
+      </section>
+    </main>    
+    
 
     <footer class='page-footer main-footer'>
       <section class='footer-top container'>
@@ -287,7 +293,7 @@
         </ul>
       </section>
       <section class='footer-bottom'>
-        <div class='container'>
+        <div class='container container-bottom'>
           <div class='footer-copyright'>
             <p>&#169; 2010-2019 Компания &laquo;Техномарт&raquo;</p>
             <p>Все права защищены</p>
@@ -304,9 +310,9 @@
             </li>
           </ul>
           <div class='feedback'>
-            <p>Обратная связь:</p>
-            <p><a class='email-link' href='mailto:mail@htmlacademy.ru'>mail@htmlacademy.ru</a></p>
-            <p>Разработано-<a class='site-link' href='https://htmlacademy.ru/intensive/htmlcss'>htmlacademy.ru</a></p>
+            <p>Обратная связь:<br>
+            <a class='email-link' href='mailto:mail@htmlacademy.ru'>mail@htmlacademy.ru</a></p>
+            <p>Разработано-<br><a class='site-link' href='https://htmlacademy.ru/intensive/htmlcss'>htmlacademy.ru</a></p>
           </div>
         </div>
       </section>

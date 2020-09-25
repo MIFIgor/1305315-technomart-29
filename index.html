@@ -55,7 +55,7 @@
         </p>
         </div>
         <div class='contact'>
-          <p><a class='phone' href='tel:+7(812)555-05-55'><img src='img/icon-phone.svg' width='19' height='19' alt='user'>+7(812)555-05-55</a></p>
+          <p class='phone'><a href='tel:+7(812)555-05-55'><img src='img/icon-phone.svg' width='19' height='19' alt='user'>+7(812)555-05-55</a></p>
           <p class='address'>г.Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</p>
         </div>
         <p><a class='login-link' href='blank.html'><svg class='enter' width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,80 +78,93 @@
       </nav>
     </header>
 
-    <main class='container'>
+    <main class='container main-light'>
       <section class='goods'>
         <h2 class='visually-hidden'>Товары в магазине</h2> <!--hidden-->
         <ul class='goods-list'>
           <li class='goods-item material'>            
             <h3>Материалы</h3>
+            <img src='img/icon-1.svg' width='44' height='65' alt='Ведро'>
             <p><a class='goods-button' href='blank.html'>На любой вкус</a></p>            
           </li>
           <li class='goods-item tools'>            
             <h3>Инструмент</h3>
+            <img src='img/icon-2.svg' width='75' height='61' alt='Дрель'>
             <p><a class='goods-button' href='blank.html'>На любой случай</a></p>                        
           </li>
           <li class='goods-item equipment'>            
             <h3>Техника</h3>
+            <img src='img/icon-3.svg' width='78' height='62' alt='Трактор'>
             <p><a class='goods-button' href='blank.html'>Для стройки</a></p>          
           </li>
           <li class='goods-item discount'>            
             <h3>Скидки 50%</h3>
+            <img src='img/icon-4.svg' width='' height='' alt='Корзина'>
             <p><a class='goods-button' href='blank.html'>На 350 товаров</a></p>           
           </li>
           <li class='goods-item delivery'>
             <h3>Доставка</h3>
+            <img src='img/icon-5.svg' width='78' height='63' alt='Фургон'>
             <p><a class='goods-button' href='blank.html'>Бесплатно</a></p>
           </li>
+          <li class='slider'>
+            <img src='img/slider.png' width='620' height='266' alt='Мужик с перфоратором'> <!--Пока не знаю как его делать-->
+            <!--<a class='button-link' href='catalog.html'>Открыть каталог</a>-->
+          </li>          
         </ul>
-        <div cass='slider'>
-          <img src='img/slider.png' width='620' height='266' alt='Мужик с перфоратором'> <!--Пока не знаю как его делать-->
-          <!--<a class='button-link' href='catalog.html'>Открыть каталог</a>-->
-        </div>
       </section>
 
       <section class='popular-goods'>        
         <h2>Популярные товары</h2>
-        <p><a class='button-link' href='#'>Все популярные товары</a></p>
+        <p><a class='button-link popular-button' href='#'>Все популярные товары</a></p>
         <ul class='popular-list'>
-          <li class='popular-item'>            
-            <img src='img/object-2.png' width='184' height='164' alt='Перфоратор BFG 9000'>
+          <li class='popular-item'>
+            <div class='popular-picture'>            
+              <img src='img/object-2.png' width='184' height='164' alt='Перфоратор BFG 9000'>
+            </div>
             <h3>Перфоратор BOSCH BFG 9000</h3>
             <p class='old-price'>32500 P.</p>
             <p class='pentagon'>25500 P.</p>            
           </li>
-          <li class='popular-item'>            
-            <img src='img/object-1.png' width='127' height='112' alt='Перфоратор BFG 3000'>
+          <li class='popular-item'>
+            <div class='popular-picture'>           
+              <img src='img/Object-1.png' width='127' height='112' alt='Перфоратор BFG 3000'>
+            </div>
             <h3>Перфоратор BOSCH BFG 3000</h3>
             <p class='old-price'>22500 P.</p>
             <p class='pentagon'>15500 P.</p>          
           </li>
-          <li class='popular-item'>            
-            <img src='img/object.png' width='144' height='128' alt='Перфоратор BFG 6000'>
+          <li class='popular-item'>
+            <div class='popular-picture'>            
+              <img src='img/Object.png' width='144' height='128' alt='Перфоратор BFG 6000'>
+            </div>
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <p class='old-price'>30500 P.</p>
             <p class='pentagon'>25500 P.</p>            
           </li>
-          <li class='popular-item'>            
-            <img src='img/object-3.png' width='127' height='112' alt='Перфоратор BFG 2000'>
+          <li class='popular-item'>
+            <div class='popular-picture'>           
+              <img src='img/Object-3.png' width='127' height='112' alt='Перфоратор BFG 2000'>
+            </div>
             <h3>Перфоратор BOSCH BFG 2000</h3>
             <p class='old-price hidden'>12500 P.</p> <!--hidden-->
             <p class='pentagon'>12500 P.</p>            
-          </li>
+          </li>          
         </ul>
       </section>
 
       <section class='popular-logo'>
         <h2>Популярные производители</h2>
-        <p><a class='button-link' href='#'>Все производители</a></p>
+        <p><a class='button-link popular-button' href='#'>Все производители</a></p>
         <ul class="popular-logo-list">
-          <li class='popular-logo-item'><a href='#'><img src='img/object-7.png'  width='126' height='37' alt='Bosch'></a></li>
-          <li class='popular-logo-item'><a href='#'><img src='img/object-6.png'  width='123' height='40' alt='Makita'></a></li>
-          <li class='popular-logo-item'><a href='#'><img src='img/object-5.png'  width='146' height='44' alt='DeWalt'></a></li>
-          <li class='popular-logo-item'><a href='#'><img src='img/object-4.png'  width='200' height='75' alt='Интерскол'></a></li>
-          <li class='popular-logo-item'><a href='#'><img src='img/object-11.png' width='169' height='31' alt='Hitachi'></a></li>
-          <li class='popular-logo-item'><a href='#'><img src='img/object-10.png' width='121' height='73' alt='LG'></a></li>
-          <li class='popular-logo-item'><a href='#'><img src='img/object-9.png'  width='151' height='98' alt='AEG power solutions'></a></li>
-          <li class='popular-logo-item'><a href='#'><img src='img/object-8.png'  width='206' height='73' alt='Metabo work. don"t play'></a></li>
+          <li class='popular-logo-item'><a href='#'><img src='img/Object-7.png'  width='126' height='37' alt='BOCSH'></a></li>
+          <li class='popular-logo-item'><a href='#'><img src='img/Object-6.png'  width='123' height='40' alt='MAKITA'></a></li>
+          <li class='popular-logo-item'><a href='#'><img src='img/Object-5.png'  width='146' height='44' alt='DeWalt'></a></li>
+          <li class='popular-logo-item'><a href='#'><img src='img/Object-4.png'  width='200' height='75' alt='Интерскол'></a></li>
+          <li class='popular-logo-item'><a href='#'><img src='img/Object-11.png' width='169' height='31' alt='HITACHI'></a></li>
+          <li class='popular-logo-item'><a href='#'><img src='img/Object-10.png' width='121' height='73' alt='LG'></a></li>
+          <li class='popular-logo-item'><a href='#'><img src='img/Object-9.png'  width='151' height='98' alt='AEG power solutions'></a></li>
+          <li class='popular-logo-item'><a href='#'><img src='img/Object-8.png'  width='206' height='73' alt='Metabo work. don"t play'></a></li>          
         </ul>
       </section>
 
@@ -161,14 +174,14 @@
           Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
-        <h2>Доставка</h2>
+        <h2 class='second'>Доставка</h2>
         <p class='service_delivery'>
           Мы с удовольствием доставим ваш товар прямо<br>
           к вашему подъезду совершенно бесплатно!<br>
           Ведь мы неплохо заработаем,<br>
           поднимая его на ваш этаж!
         </p>
-        <div class='slider'> <!--Пока не знаю как его делать-->
+        <div class='slider_2'> <!--Пока не знаю как его делать-->
           <p class='slider-delivery'>Доставка</p>
           <p class='guarantee'>Гарантия</p>
           <p class='credit'>Кредит</p> 
@@ -176,20 +189,20 @@
         <img src='img/car-delivery.svg' width='468' height='261' alt='Машина доставки'>
       </section>
 
-      <section class='about container'>
-        <div class='about'>
-        <h2>Компания &laquo;Техномарт&raquo;</h2>
-        <p class='shopping'>
-          Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит 
-          равнодушными любителей сэкономить на гастарбайтерах.
-        </p>
-        <p class='shopping'>
-          Мы сможем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
-        </p>
-        <p class='delivery-line'>Деловые линии</p>
-        <p class='delivery-line'>Автотрейдинг</p>
-        <p class='delivery-line'>ЖелДорЭкспедиция</p>
-        <p><a class='button-link' href='#'>Подробнее о компании</a></p>
+      <section class='about'>
+        <div class='about-company'>
+          <h2>Компания &laquo;Техномарт&raquo;</h2>
+          <p class='shopping'>
+            Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит 
+            равнодушными любителей сэкономить на гастарбайтерах.
+          </p>
+          <p class='shopping'>
+            Мы сможем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
+          </p>
+          <p class='delivery-line'>Деловые линии</p>
+          <p class='delivery-line'>Автотрейдинг</p>
+          <p class='delivery-line'>ЖелДорЭкспедиция</p>
+          <p><a class='button-link' href='#'>Подробнее о компании</a></p>
         </div>
         <div class='contact'>
           <h2>Контакты</h2>
@@ -216,7 +229,7 @@
           <p class='footer-user-logo'></p>
           <!--<img src='img/logo.png' width='220' height='68' alt='Логотип'>  -->
         </a>
-        <ul class="footer-list">
+        <ul class='footer-list'>
           <li class='footer-item'><a href='index.html'>Компания</a></li>
           <li class='footer-item'><a href='blank.html'>Новости</a></li>
           <li class='footer-item'><a href='catalog.html'>Каталог</a></li>
@@ -237,7 +250,7 @@
         </ul>
       </section>
       <section class='footer-bottom'>
-        <div class='container'>
+        <div class='container container-bottom'>
           <div class='footer-copyright'>
             <p>&#169; 2010-2019 Компания &laquo;Техномарт&raquo;</p>
             <p>Все права защищены</p>
@@ -254,9 +267,9 @@
             </li>
           </ul>
           <div class='feedback'>
-            <p>Обратная связь:</p>
-            <p><a class='email-link' href='mailto:mail@htmlacademy.ru'>mail@htmlacademy.ru</a></p>
-            <p>Разработано-<a class='site-link' href='https://htmlacademy.ru/intensive/htmlcss'>htmlacademy.ru</a></p>
+            <p>Обратная связь:<br>
+            <a class='email-link' href='mailto:mail@htmlacademy.ru'>mail@htmlacademy.ru</a></p>
+            <p>Разработано-<br><a class='site-link' href='https://htmlacademy.ru/intensive/htmlcss'>htmlacademy.ru</a></p>
           </div>
         </div>
       </section>
