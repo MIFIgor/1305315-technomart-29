@@ -27,7 +27,7 @@
             <p class='user-logo'></p>
            <!-- <img src='img/logo.png' width='220' height='47' alt='Логотип магазина'>-->
           </a>
-          <form action='' method='post'>
+          <form class='header-form' action='https://echo.htmlacademy.ru/' method='get'>
             <label class='search'><svg class='searching' width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill=""/>
               </svg>
@@ -47,10 +47,10 @@
         </div>
       </section>
       <section class='header-middle container'>
-      <!--  <h1 class='title visually-hidden'>Интернет-магазин строительных материалов и инструментов для ремонта</h1>  -->      <!--hidden-->
+       <h1 class='title nothing'>Интернет-магазин строительных материалов и инструментов для ремонта</h1>      <!--hidden-->
         <div class='site-title'>
           <p>Интернет-магазин
-          строительных материалов
+          строительных материалов<br>
           и инструментов для ремонта
         </p>
         </div>
@@ -80,7 +80,7 @@
 
     <main class='main-container'>
       <section class='goods container'>
-      <!--  <h2 class='visually-hidden'>Товары в магазине</h2>   -->             <!--hidden-->
+        <h2 class='nothing'>Товары в магазине</h2>                <!--hidden-->
         <ul class='goods-list'>
           <li class='goods-item material'>            
             <h3>Материалы</h3>
@@ -128,7 +128,7 @@
           </li>
           <li class='popular-item'>
             <div class='popular-picture'>           
-              <img class='second' src='img/Object-1.png' width='127' height='112' alt='Перфоратор BFG 3000'>
+              <img src='img/Object-1.png' width='127' height='112' alt='Перфоратор BFG 3000'>
             </div>
             <h3>Перфоратор BOSCH BFG 3000</h3>
             <p class='old-price'>22500 P.</p>
@@ -136,7 +136,7 @@
           </li>
           <li class='popular-item'>
             <div class='popular-picture'>            
-              <img class='third' src='img/Object.png' width='144' height='128' alt='Перфоратор BFG 6000'>
+              <img src='img/Object.png' width='144' height='128' alt='Перфоратор BFG 6000'>
             </div>
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <p class='old-price'>30500 P.</p>
@@ -144,10 +144,10 @@
           </li>
           <li class='popular-item'>
             <div class='popular-picture'>           
-              <img class='fourth' src='img/Object-3.png' width='127' height='112' alt='Перфоратор BFG 2000'>
+              <img src='img/Object-3.png' width='127' height='112' alt='Перфоратор BFG 2000'>
             </div>
             <h3>Перфоратор BOSCH BFG 2000</h3>
-            <p class='old-price hidden'>12500 P.</p> <!--hidden-->
+            <p class='old-price visually-hidden'>12500 P.</p> <!--hidden-->
             <p class='pentagon'>12500 P.</p>            
           </li>          
         </ul>
@@ -166,8 +166,7 @@
           <li class='popular-logo-item'><a href='#'><img src='img/Object-9.png'  width='151' height='98' alt='AEG power solutions'></a></li>
           <li class='popular-logo-item'><a href='#'><img src='img/Object-8.png'  width='206' height='73' alt='Metabo work. don"t play'></a></li>          
         </ul>
-      </section>
-    
+      </section>    
 
       <section class='service-delivery'>
         <div class='container'>
@@ -320,27 +319,44 @@
 
     
     <section class='modal modal-message container'>
-      <h2 class='visually-hidden'>Напишите нам</h2> <!--hidden-->
+      <h2 class='nothing'>Напишите нам</h2> <!--hidden-->
       <form class='form-message' action='https://echo.htmlacademy.ru' method='post'>
-        <p class='message-name'>
-          <label class='write-us-name' for='write-us-login'>Ваше имя:</label>
-          <input class='write-us-input' type='text' name='login' id='write-us-login' placeholder='Имя Фамилия' required>
-        </p>
-        <p class='message-email'>
-          <label class='write-us-email' for='write-us-email'>Ваш email:</label>
-          <input class='write-us-input' type='email' name='email' id='write-us-email' placeholder='email@example.com' required>
-        </p>
-        <p class='message-text'>Текст письма:</p>
-        <p><textarea rows='5' cols='50' name='message' required>В свободной форме</textarea></p>
-        <button class='button-link' type='submit'>Отправить</button>
-        <button class='modal-close' type='button'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'</button>
+        <div class='wrapper-message container-inner'>
+          <p class='message-name'>
+            <label class='write-us-name' for='write-us-login'>Ваше имя:</label>
+            <input class='write-us-input' type='text' name='login' id='write-us-login' placeholder='Имя Фамилия' required>
+          </p>
+          <p class='message-email'>
+            <label class='write-us-email' for='write-us-email'>Ваш email:</label>
+            <input class='write-us-input' type='email' name='email' id='write-us-email' placeholder='email@example.com' required>
+          </p>
+        </div>
+        <p class='message-text container-inner'>Текст письма:</p>
+        <p class='text'><textarea rows='5' cols='62' name='message' required>В свободной форме</textarea></p>
+        <div class='wrapper-button'>
+          <button class='button-link button-message container' type='submit'>Отправить</button>
+        </div>
       </form>
+        <button class='modal-close' type='button'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'</button>      
     </section>
 
+
+    <div>
+      Пустое место
+    </div>
+
+
     <section class='modal modal-cart container'>
-      <h2>Корзина</h2>
-      <button class='modal-close' type='button'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'</button>
+      <h2 class='nothing'>Корзина</h2>      
+        <img src='img/icon-mark.svg' width='66' height='66' alt='Зеленый круг с белой "птичкой"'>
+        <h3>Товар добавлен в корзину!</h3>  
+      <div class='button-cart'>
+        <button class='button-link button-modal-cart' type='button'>Оформить заказ</button>
+        <button class='button-in-cart button-modal-cart' type='button'>Продолжить покупки</button>
+      </div>
+      <button class='modal-cart-close' type='button'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'</button>
     </section>
+
 
     <section class='modal modal-maps container'>
       <h2 visually-hidden>Карта</h2>  <!--hidden-->

@@ -19,7 +19,7 @@
             <p class='user-logo'></p>
             <!--<img src='img/logo.png' width='220' height='47' alt='Логотип магазина'>  -->
           </a>
-          <form action='' method='post'>
+          <form class='header-form' action='https://echo.htmlacademy.ru/' method='get'>
             <label class='search'><svg class='searching' width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill=""/>
               </svg>
@@ -39,12 +39,12 @@
         </div>
       </section>
       <section class='header-middle-catalog container'>
-      <!--  <h1 class='title visually-hidden'>Интернет-магазин строительных материалов и инструментов для ремонта</h1>  -->   <!--hidden-->
+        <h1 class='title nothing'>Интернет-магазин строительных материалов и инструментов для ремонта</h1>   <!--hidden-->
         <div class='site-title'>
           <p>Интернет-магазин
-          строительных материалов
-          и инструментов для ремонта
-        </p>
+            строительных материалов<br>
+            и инструментов для ремонтa            
+          </p>
         </div>
         <div class='contact'>
           <p class='phone'><a href='tel:+7(812)555-05-55'><img src='img/icon-phone.svg' width='19' height='19' alt='user'>+7(812)555-05-55</a></p>
@@ -97,14 +97,25 @@
           </li>
         </ul>
       </div>
+
       <div class='wrapper-global container'>
         <section class='filter'>
-        <!--  <h2 classs='visually-hidden'>Фильтр товаров</h2>-->   <!--hidden-->
+          <h2 class='nothing'>Фильтр товаров</h2>   <!--hidden-->
           <h3>Фильтр:</h3>
-          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class='filter-price'>
               <p class='price'>Цена:</p>
-              <div></div>  <!--форма ползунка-->
+              <div class='range'>
+                <span class='range-one'><img src='img/filter-button.svg' width='20' height='22' alt='filter-button'></span>
+                <span class='range-two'><img src='img/filter-button.svg' width='20' height='22' alt='filter-button'></span>
+                <span class='line-green'></span>
+                <span class='line-grey'></span>
+              </div>                <!--форма ползунка-->
+              <div class='range-price'>
+                <span class='min'>0</span>
+                <span class='hyphen'>&ndash;</span>
+                <span class='max'>3000</span>
+              </div>
             </fieldset>
             <fieldset class='filter-producer'>
               <p class='producer'>Производители:</p>
@@ -131,8 +142,8 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
-              <p class='power'>Питание</p>
+            <fieldset class='filter-power'>
+              <p class='power'>Питание:</p>
               <ul class='power-list'>
                 <li class='filter-option filter-radio'>
                   <input class='filter-input' type='radio' name='power-group' id='battery' checked>
@@ -143,13 +154,13 @@
                   <label for='power-network'>Сетевые</label>
                 </li>
               </ul>
-              <a class='button-power' href='#'>Показать</a>
+              <button class='button-power' type='submit'>Показать</button>
             </fieldset>         
           </form>
         </section>
         <div class='wrapper-right'>
           <section class='assortment'>
-          <!-- <h2 class='visually-hidden'>Сортировка товаров</h2>-->  <!--hidden-->
+            <h2 class='nothing'>Сортировка товаров</h2>       <!--hidden-->
             <h3 class='sort'>Сортировка:</h3>
             <p class='prices'><span>По цене<span></p>
             <p class='type'><span>По типу</span></p>
@@ -166,24 +177,18 @@
               </div>
           </section>
           <section class='catalog'>
-        <!--<h2 class='visually-hidden'>Страница перфораторов</h2>-->          <!--hidden-->
+            <h2 class='nothing'>Страница перфораторов</h2>         <!--hidden-->
             <ul class='catalog-list'>
-              <li class='catalog-item'>
-                <div class='catalog-picture'>              
-                  <a href='blank.html'>
-                    <h3>Перфоратор BOSCH BFG 6000</h3>
-                    <p class='catalog-item-image'><img src='img/object.png' width='144' height='128' alt='Перфоратор BOSCH BFG 6000'></p>
-                  </a>
-                </div>
+              <li class='catalog-item'>              
+                <a class='catalog-anchor' href='blank.html'>
+                  <h3>Перфоратор BOSCH BFG 6000</h3>
+                  <p class='catalog-item-image'><img src='img/object.png' width='144' height='128' alt='Перфоратор BOSCH BFG 6000'></p>
+                </a>
                 <p class='old-price'>30500 P.</p>
-                <p class='pentagon'>25500 P.</p>
-              <!-- <div class='catalog-hidden'>
-                  <button class='buy' type='button'><img src='img/icon-cart.svg' width='15' height='15' alt='Cart'>Купить</button>
-                  <button class='into-bookmarks' type='button'>В закладки</button>
-                </div>-->
+                <p class='pentagon'>25500 P.</p>             
               </li>
               <li class='catalog-item'>
-                <a href='blank.html'>
+                <a class='catalog-anchor' href='blank.html'>
                   <h3>Перфоратор BOSCH BFG 6000</h3>
                   <p class='catalog-item-image'><img src='img/object.png' width='144' height='128'  alt='Перфоратор BOSCH BFG 6000'></p>
                 </a>
@@ -191,7 +196,7 @@
                 <p class='pentagon'>25500 P.</p>
               </li>
               <li class='catalog-item'>
-                <a href='blank.html'>
+                <a class='catalog-anchor' href='blank.html'>
                   <h3>Перфоратор BOSCH BFG 6000</h3>
                   <p class='catalog-item-image'><img src='img/object.png' width='144' height='128'  alt='Перфоратор BOSCH BFG 6000'></p>
                 </a>
@@ -199,7 +204,7 @@
                 <p class='pentagon'>25500 P.</p>
               </li>
               <li class='catalog-item'>
-                <a href='blank.html'>
+                <a class='catalog-anchor' href='blank.html'>
                   <h3>Перфоратор BOSCH BFG 3000</h3>
                   <p class='catalog-item-image'><img src='img/object-1.png' width='127' height='112' alt='Перфоратор BOSCH BFG 3000'></p>
                 </a>
@@ -207,7 +212,7 @@
                 <p class='pentagon'>15500 P.</p>
               </li>
               <li class='catalog-item'>
-                <a href='blank.html'>
+                <a class='catalog-anchor' href='blank.html'>
                   <h3>Перфоратор BOSCH BFG 6000</h3>
                   <p class='catalog-item-image'><img src='img/object.png' width='144' height='128' alt='Перфоратор BOSCH BFG 6000'></p>
                 </a>
@@ -215,15 +220,15 @@
                 <p class='pentagon'>25500 P.</p>
               </li>
               <li class='catalog-item'>
-                <a href='blank.html'>
+                <a class='catalog-anchor' href='blank.html'>
                   <h3>Перфоратор BOSCH BFG 2000</h3>
                   <p class='catalog-item-image'><img src='img/object-3.png' width='127' height='112' alt='Перфоратор BOSCH BFG 2000'></p>
                 </a>
-                <p class='old-price hidden'>12500 P.</p> <!--hidden-->
+                <p class='old-price visually-hidden'>12500 P.</p>  <!--hidden-->
                 <p class='pentagon'>12500 P.</p>
               </li>
               <li class='catalog-item'>
-                <a href='blank.html'>
+                <a class='catalog-anchor' href='blank.html'>
                   <h3>Перфоратор BOSCH BFG 3000</h3>
                   <p class='catalog-item-image'><img src='img/object-1.png' width='127' height='112' alt='Перфоратор BOSCH BFG 3000'></p>
                 </a>
@@ -231,7 +236,7 @@
                 <p class='pentagon'>15500 P.</p>
               </li>
               <li class='catalog-item'>
-                <a href='blank.html'>
+                <a class='catalog-anchor' href='blank.html'>
                   <h3>Перфоратор BOSCH BFG 6000</h3>
                   <p class='catalog-item-image'><img src='img/object.png' width='144' height='128' alt='Перфоратор BOSCH BFG 6000'></p>
                 </a>
@@ -239,14 +244,18 @@
                 <p class='pentagon'>25500 P.</p>
               </li>
               <li class='catalog-item'>
-                <a href='blank.html'>
+                <a class='catalog-anchor' href='blank.html'>
                   <h3>Перфоратор BOSCH BFG 2000</h3>
                   <p class='catalog-item-image'><img src='img/object-3.png' width='127' height='112' alt='Перфоратор BOSCH BFG 2000'></p>
                 </a>
-                <p class='old-price hidden'>12500 P.</p> <!--hidden-->
+                <p class='old-price visually-hidden'>12500 P.</p> <!--hidden-->
                 <p class='pentagon'>12500 P.</p>
               </li>
             </ul>
+            <div class='show-block hidden-card'>
+              <button class='buy' type='button'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></button>
+              <button class='into-bookmarks' type='button'>В закладки</button>
+            </div>
           </section>
         </div>
       </div>
@@ -266,13 +275,12 @@
         <div class='container'>
           <h2 class='two-words'>Пара слов о перфораторах</h2>
           <div class='catalog-text'>
-            <p>Перфоратор-универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и 
+            <p>Перфоратор-универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
+            <p>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и 
             отбойного молотка.
             </p> 
             <p>В ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;: в одном устройстве будут совмещены отбойный молоток и 
-            ударная дрель.
-            </p>
+            ударная дрель.</p>
           </div>
         </div>
       </section>
