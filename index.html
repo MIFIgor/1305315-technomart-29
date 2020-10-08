@@ -28,10 +28,12 @@
            <!-- <img src='img/logo.png' width='220' height='47' alt='Логотип магазина'>-->
           </a>
           <form class='header-form' action='https://echo.htmlacademy.ru/' method='get'>
-            <label class='search'><svg class='searching' width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill=""/>
+            <input class='search' type='text' name='search' placeholder='Поиск:'>
+            <button class='button-search' type='submit'>
+              <svg class='searching' width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <path fill-rule='evenodd' clip-rule='evenodd' d='M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z' fill='white'/>
               </svg>
-              Поиск:<input type='text' name='search' placeholder=''></label>
+            </button>
           </form>
           <a class='bookmark' href='blank.html'><svg class='book' width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z" fill="white"/>
@@ -253,9 +255,9 @@
           <h2>Контакты</h2>
           <p class='shopping-1'>Вы можете забрать товар сами, заехав в наш офис:</p>
           <div class='map'>
-            <a href="https://yandex.ru/maps/?um=constructor%3A03438ab9c7128bd0aeafe46cd67ac9d81a2be5f1cbda35fa24cf63211fb40d77&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A03438ab9c7128bd0aeafe46cd67ac9d81a2be5f1cbda35fa24cf63211fb40d77&amp;width=300&amp;height=158&amp;lang=ru_RU" alt="Адрес 'Техномарта'" style="border: 0;" /></a>
+            <img class='mini-map' src='img/mini-map.svg' width='300' height='158' alt='Б. Конюшенная 19/8'>
           </div>
-          <p><a class='button-link about-button' href='#'>Заблудились? Напишите нам!</a></p>
+          <p><a class='button-link about-button'>Заблудились? Напишите нам!</a></p>
         </div>
       </section>
     </main>
@@ -320,7 +322,7 @@
       </section>
     </footer>
 
-
+<!--
     <section class='modal model-registration container'>
       <h2>Регистрация</h2>
       <form class='form-registration' action='https://echo.htmlacademy.ru' method='post'>
@@ -351,12 +353,12 @@
         </p>
       <button class='button-enter' type='submit'>Войти</button>
       </form>
-    </section>
+    </section>   -->
 
     
-    <section class='modal modal-message container'>
+    <section class='modal modal-message'>
       <h2 class='visually-hidden'>Напишите нам</h2> <!--hidden-->
-      <form class='form-message' action='https://echo.htmlacademy.ru' method='post'>
+      <form class='form-message' action='https://echo.htmlacademy.ru' method='get'>
         <div class='wrapper-message container-inner'>
           <p class='message-name'>
             <label class='write-us-name' for='write-us-login'>Ваше имя:</label>
@@ -373,7 +375,7 @@
           <button class='button-link button-message container' type='submit'>Отправить</button>
         </div>
       </form>
-        <button class='modal-button' type='button'><img class='modal-close' src='img/icon-close.svg' width='21' height='21' alt='cross-red'</button>      
+        <button class='modal-button' type='button'><img class='modal-close' src='img/icon-close.svg' width='21' height='21' alt='cross-red' arial-label='Закрыть'</button>      
     </section>
 
 
@@ -382,29 +384,17 @@
     </div>
 
 
-    <section class='modal modal-cart container'>
-      <h2 class='visually-hidden'>Корзина</h2>   <!--hidden-->
-      <div class='wrapper-cart'>      
-        <img class='icon-mark' src='img/icon-mark.svg' width='66' height='66' alt='Зеленый круг с белой "птичкой"'>
-        <h3>Товар добавлен в корзину!</h3>
-      </div>  
-      <div class='button-cart'>
-        <button class='button-link button-modal-cart' type='button'>Оформить заказ</button>
-        <button class='button-in-cart button-modal-cart' type='button'>Продолжить покупки</button>
-      </div>
-      <button class='modal-button' type='button'><img class='modal-close' src='img/icon-close.svg' width='21' height='21' alt='cross-red'</button>
-    </section>
+    
 
-
-    <section class='modal modal-maps container'>
-      <h2 visually-hidden>Карта</h2>         <!--hidden-->
-      <div class='map-yandex'>
-        <script class='piter' type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aef3c125b63873fa8b7611d6285a02e73f616d463e638bc1935b1f33e222df969&amp;width=943&amp;height=449&amp;lang=ru_RU&amp;scroll=true"></script>
-      </div>
-      <button class='modal-close' type='button'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'</button>
+    <section class='modal modal-maps'>
+      <h2 class='visually-hidden'>Карта</h2>         <!--hidden-->
+      <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.432478059941!2d30.32330650958949!3d59.93864459953058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1602047121948!5m2!1sru!2sru' width='943' height='449' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>
+      <button class='modal-button' type='button'><img class='modal-close' src='img/icon-close.svg' width='21' height='21' alt='cross-red' arial-label='Закрыть'</button>
     </section>
 
     <script src='js/slider_1.js'></script>
     <script src='js/service.js'></script>
+    <script src='js/modal-win.js'></script>
+    <script src='js/search.js'></script>
   </body>
 </html>
