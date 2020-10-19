@@ -739,8 +739,7 @@ h3 {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  width: 30px;
-  position: absolute;
+  min-width: 30px;
   left: 295px;
   bottom: 36px;
   z-index: 20px;
@@ -874,7 +873,7 @@ h3 {
   align-items: center;
   width: 100px;
   height: 30px;
-  left:150px; top: 28px;
+  left: 150px; top: 28px;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -1089,7 +1088,6 @@ h3 {
   color: var(--dark-grey);
   background-color: var(--basic-white);
 }
-
 
 .current-button:hover,
 .current-boton:focus {
@@ -2248,6 +2246,11 @@ fieldset:last-child {
   order: 2;
 }
 
+/*
+.show-block {
+  display: none;
+}*/
+
 .show-block { 
   width: 220px;
   height: 180px;
@@ -2261,23 +2264,28 @@ fieldset:last-child {
 .buy {
   position: relative;
   box-sizing: boder-box;
-  margin-left: 38px;
-  margin-top: 41px;
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 41px 44px 10px 38px;
+  padding-top: 2px;    
   width: 135px;
-  height: 38px;
+  min-height: 35px;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 14px;
-  line-height: 36px;
+  line-height: 18px;
   font-weight: normal;
   font-style: normal;
   text-transform: uppercase;
-  text-align: center;
   border: none;
   border-bottom: 3px solid var(--dark-green);
   background-color: var(--basic-green);
   color: var(--basic-white);
   outline: none;
+}
+
+.buy span {
+  margin-left: 15px;
 }
 
 .hidden-cart {
@@ -2287,9 +2295,12 @@ fieldset:last-child {
   opacity: 0.3;
 }
 
-.buy:hover {
+.buy:hover,
+.buy:focus {
   cursor: pointer;
   background-color: var(--success);
+  text-decoration: none;
+  outline: none;
 }
 
 .buy:active {
@@ -2299,35 +2310,38 @@ fieldset:last-child {
 
 .into-bookmarks {
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 38px;
   width: 135px;
-  height: 38px;
+  min-height: 38px;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 14px;
-  line-height: 34px;
+  line-height: 18px;
   font-weight: normal;
   font-style: normal;
   text-transform: uppercase;
-  text-align: center;
   color: var(--dark-grey);
   border: 3px solid var(--basic-green);
   background-color: var(--basic-white);
   outline: none;
 }
 
-.into-bookmarks:hover {
+.into-bookmarks:hover,
+.into-bookmarks:focus {
   cursor: pointer;
   border-color: var(--dark-grey);
+  text-decoration: none;
+  outline: none;
 }
 
 .into-bookmarks:active {
   color: var(--grey-bookmarks);
   border-color: var(--grey-bookmarks);
 }
-/*
-.show-block {
-  display: none;
-}*/
+
+/*-----Pagination-----*/
 
 .pages-button { 
   display: flex;   
@@ -2427,14 +2441,31 @@ fieldset:last-child {
 
 /*--Modal windows -*/
 
+
 .modal {
-  position: fixed;  
+  position: fixed;
+  /*top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;*/ 
+  display: none;
   left: 50%;
   top: 50%;
   transform: translate( -50%, -50%);
   box-shadow: 0px 4px 20px 0px var(--dark-shadow);
   z-index: 20;
 }
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
 
 .modal-close {
   width: 21px;
@@ -2457,7 +2488,6 @@ fieldset:last-child {
 /*---Пишите нам----*/
 
 .modal-message {
-  display: none;
   margin-bottom: 20px;
   padding-top: 46px;
   width: 620px;
@@ -2553,7 +2583,6 @@ fieldset:last-child {
 /*--Корзина добавления товара--*/
 
 .modal-cart {
-  display:none;
   width: 620px;
   height: 282px;
   border-top: 7px solid var(--modal-line-red);
@@ -2591,23 +2620,33 @@ fieldset:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 620px;
   height: 112px;
   background-color: var(--grey-modal-cart);
 }
 
+.button-cart .button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .button-in-cart {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 10px;
   width: 192px;
-  height: 38px;
+  min-height: 38px;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 18px;
   text-align: center;
   color: var(--basic-black);
   background-color: var(--basic-white);
   border: none;
+  text-decoration: none;
   text-transform: uppercase;  
 }
 
@@ -2626,7 +2665,6 @@ fieldset:last-child {
 /*---Карта---*/
 
 .modal-maps {
-  display: none;
   width: 943px;
   height: 449px;
   background-color: var(--basic-white);
@@ -2645,6 +2683,51 @@ fieldset:last-child {
 .modal-maps .modal-close {
   position: absolute;
   left: 912px; top: 18px;
+}
+
+
+/*----- Animation-----*/
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 

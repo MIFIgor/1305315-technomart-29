@@ -278,8 +278,8 @@
               </li>
             </ul>
             <div class='show-block hidden-card visually-hidden'>
-              <button class='buy' type='button' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></button>
-              <button class='into-bookmarks' type='button'>В закладки</button>
+              <a href='#' class='buy' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></a>
+              <a href='#' class='into-bookmarks' aria-label='Добавить в закладки'><span>В закладки</span></a>
             </div>
           </section>
           <section class='pages-button'>
@@ -362,6 +362,7 @@
       </section>
     </footer>
 
+    <!--Modal cart  Корзина-->
 
     <section class='modal modal-cart'>
       <h2 class='visually-hidden'>Корзина</h2>   <!--hidden-->
@@ -370,8 +371,14 @@
         <h3>Товар добавлен в корзину!</h3>
       </div>  
       <div class='button-cart'>
-        <button class='button-link button-modal-cart' type='button'>Оформить заказ</button>
-        <button class='button-in-cart button-modal-cart' type='button'>Продолжить покупки</button>
+        <a href='#' class='button-link button-modal-cart'>Оформить заказ</a>
+        <a href='catalog.html' class='button-in-cart button-modal-cart'>Продолжить покупки</a>
       </div>
       <button class='modal-close' type='button' aria-label='Закрыть'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'></button>
     </section>
+
+    <!--<script src='js/modal-win.js'></script>-->
+    <script src='js/catalog.js'></script>
+    <srcipt src='js/modal-win-catalog.js'></srcipt>
+  </body>
+</html>

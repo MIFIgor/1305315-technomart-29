@@ -1,7 +1,7 @@
 'use strict'
 
-let elems = document.querySelectorAll('.catalog-item');
-let showBlock = document.querySelector('.show-block');
+const elems = document.querySelectorAll('.catalog-item');
+const showBlock = document.querySelector('.show-block');
 
 for (let elem of elems) {
   elem.addEventListener('mouseover', () => {
@@ -19,6 +19,3 @@ for (let elem of elems) {
     showBlock.classList.add('visually-hidden');
   });
 }
-
-console.log(elems);
-console.log(showBlock);

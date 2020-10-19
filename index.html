@@ -159,8 +159,7 @@
             <p class='old-price nothing'>12500 P.</p> <!--hidden-->
             <p class='pentagon'>12500 P.</p>
             <div class='new'>New</div>         
-          </li>            
-          </li>          
+          </li>                      
         </ul>
       </section>
 
@@ -188,49 +187,49 @@
           </p>          
           <div class='wrapper'>
             <div class='slider_2'> <!--Пока не знаю как его делать-->
-              <button class='slider-delivery' type='button'>Доставка</button>
+              <button class='slider-delivery current-button' type='button'>Доставка</button>
               <button class='guarantee' type='button'>Гарантия</button>
               <button class='credit' type='button'>Кредит</button>
               <img class='shadow-block' src='img/Object-shadow.svg' width='10' height='279' alt='Shadow'>
             </div>
-              <ul class='slider_2-list'>
-                <li class='slider_2-item slide current-slide'>
-                  <div class='wrapper-inner-inner'>
-                    <h2 class='second'>Доставка</h2>
-                    <p class='slider-delivery-text'>
-                      Мы с удовольствием доставим ваш товар прямо<br>
-                      к вашему подъезду совершенно бесплатно!<br>
-                      Ведь мы неплохо заработаем,<br>
-                      поднимая его на ваш этаж!
-                    </p>
-                  </div>                          
-                  <img class='lorry' src='img/car-delivery.svg' width='468' height='261' alt='Машина доставки'>
-                </li>
-                <li class='slider_2-item slide'>
-                  <div class='wrapper-inner-inner-2'>
-                    <h2 class='second'>Гарантия</h2>
-                    <p class='guarantee-text'>
-                      Если купленный у нас товар поломается или заискрит,<br>
-                      а также в случае пожара, спровацированного его<br>
-                      возгоранием, вы всегда можете быть уверены в нашей<br>
-                      гарантии. Мы обменяем сгоревший товар на новый.<br>
-                      Дом уж восстановите как-нибудь сами.                     
-                    </p>
-                  </div>        
-                  <img class='gold-100' src='img/layer-130.svg' width='389' height='283' alt='Гарантия 100%'>
-                </li>
-                <li class='slider_2-item slide'>
-                  <div class='wrapper-inner-inner-3'>
-                    <h2 class='second'>Кредит</h2>
-                    <p class='credit-text'>
-                      Залезть в долговую яму стало проще!
-                      Кредитные консультанты придут к вам на помощь.                    
-                    </p>
-                    <button class='button-link button-credit' type='submit'>Отправить заявку</button>
-                  </div>        
-                  <img class='dollar' src='img/layer-119.svg' width='465' height='285' alt='Машина доставки'>
-                </li>
-              </ul>
+            <ul class='slider_2-list'>
+              <li class='slider_2-item slide current-slide'>
+                <div class='wrapper-inner-inner'>
+                  <h2 class='second'>Доставка</h2>
+                  <p class='slider-delivery-text'>
+                    Мы с удовольствием доставим ваш товар прямо<br>
+                    к вашему подъезду совершенно бесплатно!<br>
+                    Ведь мы неплохо заработаем,<br>
+                    поднимая его на ваш этаж!
+                  </p>
+                </div>                          
+                <img class='lorry' src='img/car-delivery.svg' width='468' height='261' alt='Машина доставки'>
+              </li>
+              <li class='slider_2-item slide'>
+                <div class='wrapper-inner-inner-2'>
+                  <h2 class='second'>Гарантия</h2>
+                  <p class='guarantee-text'>
+                    Если купленный у нас товар поломается или заискрит,<br>
+                    а также в случае пожара, спровацированного его<br>
+                    возгоранием, вы всегда можете быть уверены в нашей<br>
+                    гарантии. Мы обменяем сгоревший товар на новый.<br>
+                    Дом уж восстановите как-нибудь сами.                     
+                  </p>
+                </div>        
+                <img class='gold-100' src='img/layer-130.svg' width='389' height='283' alt='Гарантия 100%'>
+              </li>
+              <li class='slider_2-item slide'>
+                <div class='wrapper-inner-inner-3'>
+                  <h2 class='second'>Кредит</h2>
+                  <p class='credit-text'>
+                    Залезть в долговую яму стало проще!
+                    Кредитные консультанты придут к вам на помощь.                    
+                  </p>
+                  <a href='#' class='button-link button-credit' aria-label='Оформление заявки'>Отправить заявку</a>
+                </div>        
+                <img class='dollar' src='img/layer-119.svg' width='465' height='285' alt='Машина доставки'>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -256,7 +255,7 @@
           <div class='map'>
             <a class='about-mini-map' href='#'><img class='mini-map' src='img/mini-map.svg' width='300' height='158' alt='Б. Конюшенная 19/8'></a>
           </div>
-          <p class='about-btn'><button class='button-link about-button' type='button'>Заблудились? Напишите нам!</button></p>
+          <p class='about-btn'><a href='#' class='button-link about-button'>Заблудились? Напишите нам!</a></p>
         </div>
       </section>
     </main>    
@@ -311,6 +310,7 @@
       </section>
     </footer>
 
+    <!--Modal windows-->
     
     <section class='modal modal-message'>
       <h2 class='visually-hidden'>Напишите нам</h2> <!--hidden-->
@@ -318,11 +318,11 @@
         <div class='wrapper-message container-inner'>
           <p class='message-name'>
             <label class='write-us-name' for='write-us-login'>Ваше имя:</label>
-            <input class='write-us-input' type='text' name='login' id='write-us-login' placeholder='Имя Фамилия' required>
+            <input class='write-us-input name' type='text' name='login' id='write-us-login' placeholder='Имя Фамилия'>
           </p>
           <p class='message-email'>
             <label class='write-us-email' for='write-us-email'>Ваш email:</label>
-            <input class='write-us-input' type='email' name='email' id='write-us-email' placeholder='email@example.com' required>
+            <input class='write-us-input email' type='email' name='email' id='write-us-email' placeholder='email@example.com'>
           </p>
         </div>
         <p class='message-text container-inner'>Текст письма:</p>
@@ -332,7 +332,8 @@
         </div>
       </form>
         <button class='modal-close' type='button' aria-label='Закрыть'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'></button>      
-    </section>    
+    </section>
+
 
     <section class='modal modal-maps'>
       <h2 class='visually-hidden'>Карта</h2>         <!--hidden-->
@@ -343,6 +344,5 @@
     <script src='js/slider_1.js'></script>
     <script src='js/service.js'></script>
     <script src='js/modal-win.js'></script>
-    <script src='js/search.js'></script>
   </body>
 </html>

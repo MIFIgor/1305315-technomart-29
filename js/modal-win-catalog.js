@@ -1,12 +1,26 @@
 'use strict'
 
-let modalCart = document.querySelector('.modal-cart');
-let buy = document.querySelector('.show-block .buy');
-let modalClose3 = document.querySelector('.modal-cart .modal-close');
+const cartPopup = document.querySelector('.modal-cart');
+const cartButton = document.querySelector('.show-block .buy');
+const cartClose = cartPopup.querySelector('.modal-close');
 
-buy.addEventListener('click', () => {
-  modalCart.style.display='block';
+cartButton.addEventListener('click', (evt) => {
+  //cartPopup.style.display='block';
+  evt.preventDefault();
+  cartPopup.classList.add('modal-show');
 });
-modalClose3.addEventListener('click', () => {
-  modalCart.style.display='none';
+cartClose.addEventListener('click', (evt) => {
+  //cartPopup.style.display='none';
+  evt.preventDefault();
+  cartPopup.classList.remove('modal-show');
 });
+window.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Escape') {
+    if (cartPopup.classList.contains('modal-show')) {
+      cartPopup.classList.remove('modal-show');
+    }
+  }
+});
+
+console.log(cartPopup);
+console.log(cartButton);

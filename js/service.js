@@ -1,72 +1,94 @@
 'use strict'
 
-
-let arrSlider_2 = [];
 let sliderDelivery = document.querySelector('.slider-delivery');
-arrSlider_2.push(sliderDelivery);
 let guarantee = document.querySelector('.guarantee');
-arrSlider_2.push(guarantee);
 let credit  = document.querySelector('.credit');
-arrSlider_2.push(credit);
-/*
-  for (let elem of arrSlider_2) {
-    elem.addEventListener('mouseover', function func() {
-      elem.style.backgroundColor='var(--darken-grey)';
-    });
 
-    elem.addEventListener('mouseout', function func() {
-      elem.style.backgroundColor='var(--dark-grey)';
-    });
+const currentButton = function () {
+  let buttons = document.querySelectorAll('.slider_2 button');
+    for (let button of buttons) {
+      if (button.classList.contains('current-button')) {
+        button.style.backgroundColor='var(--basic-white)';
+        button.style.color='var(--dark-grey)';
+      }
+      if (!button.classList.contains('current-button')) {
+        button.style.backgroundColor='var(--dark-grey)';
+        button.style.color='var(--basic-white)';
+      }
 
-    if (elem.classList.contains('current-slide') === true) {
-      elem.removeEventListener('mouseover', func);
-      elem.removeEventListener('mouseout', func);
+      button.addEventListener('mouseover', function (evt) {
+        evt.preventDefault();
+        if (!button.classList.contains('current-button')) {
+          button.style.backgroundColor='var(--darken-grey)';
+          }
+      });
+      button.addEventListener('mouseout', function (evt) {
+        evt.preventDefault();
+        if (!button.classList.contains('current-button')) {
+          button.style.backgroundColor='var(--dark-grey)';
+          }
+      });      
+      button.addEventListener('focus', function (evt) {
+        evt.preventDefault();
+        if (button.classList.contains('current-button')) {
+          button.style.boxShadow='0px 4px 20px var(--dark-shadow)';
+        }
+        if (!button.classList.contains('current-button')) {
+          button.style.backgroundColor='var(--darken-grey)';
+        }
+      });
+      button.addEventListener('blur', function (evt) {
+        evt.preventDefault();
+        if (button.classList.contains('current-button')) {
+          button.style.boxShadow='none';
+        }
+        if (!button.classList.contains('current-button')) {
+          button.style.backgroundColor='var(--dark-grey)';
+        }
+      });
     }
-  }*/
-  console.log(arrSlider_2);
+};
+
 
 let elem1 = document.querySelector('.slider_2-list li:first-child');
 let elem2 = document.querySelector('.slider_2-list li:nth-child(2)');
 let elem3 = document.querySelector('.slider_2-list li:nth-child(3)');
 
-
-guarantee.addEventListener('click', () => {
+guarantee.addEventListener('click', (evt) => {
+  evt.preventDefault();
 	elem2.classList.add('current-slide');  
   elem1.classList.remove('current-slide');
   elem3.classList.remove('current-slide');
 
-  guarantee.style.backgroundColor='var(--basic-white)';
-  guarantee.style.color='var(--dark-grey)';
-  sliderDelivery.style.backgroundColor='var(--dark-grey)';
-  sliderDelivery.style.color='var(--basic-white)';
-  credit.style.backgroundColor='var(--dark-grey)';
-  credit.style.color='var(--basic-white)'; 
+  guarantee.classList.add('current-button');
+  sliderDelivery.classList.remove('current-button');
+  credit.classList.remove('current-button');
+
+  currentButton();
 });
 
-
-sliderDelivery.addEventListener('click', () => {
+sliderDelivery.addEventListener('click', (evt) => {
+  evt.preventDefault();
 	elem1.classList.add('current-slide');  
   elem2.classList.remove('current-slide');
   elem3.classList.remove('current-slide');
+  
+  sliderDelivery.classList.add('current-button');
+  guarantee.classList.remove('current-button');
+  credit.classList.remove('current-button');
 
-  sliderDelivery.style.backgroundColor='var(--basic-white)';
-  sliderDelivery.style.color='var(--dark-grey)';
-  guarantee.style.backgroundColor='var(--dark-grey)';
-  guarantee.style.color='var(--basic-white)';
-  credit.style.backgroundColor='var(--dark-grey)';
-  credit.style.color='var(--basic-white)';  
+  currentButton();
 });
 
-
-credit.addEventListener('click', () => {
+credit.addEventListener('click', (evt) => {
+  evt.preventDefault();
 	elem3.classList.add('current-slide');  
   elem1.classList.remove('current-slide');
   elem2.classList.remove('current-slide');
 
-  credit.style.backgroundColor='var(--basic-white)';
-  credit.style.color='var(--dark-grey)';
-  guarantee.style.backgroundColor='var(--dark-grey)';
-  guarantee.style.color='var(--basic-white)';
-  sliderDelivery.style.backgroundColor='var(--dark-grey)';
-  sliderDelivery.style.color='var(--basic-white)';
+  credit.classList.add('current-button');
+  guarantee.classList.remove('current-button');
+  sliderDelivery.classList.remove('current-button');
+
+  currentButton();
 });

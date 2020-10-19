@@ -1,12 +1,12 @@
 'use strict'
 
-let slider_1 =  document.querySelector('.slider_1');
+const slider_1 =  document.querySelector('.slider_1');
 
-let iconLeft = document.querySelector('.slider_1 .icon-left');
-let iconRight = document.querySelector('.slider_1 .icon-right');
+const iconLeft = slider_1.querySelector('.icon-left');
+const iconRight = slider_1.querySelector('.icon-right');
 
-let btn1 = document.querySelector('.btn-1');
-let btn2 = document.querySelector('.btn-2');
+const btn1 = slider_1.querySelector('.btn-1');
+const btn2 = slider_1.querySelector('.btn-2');
       
 iconLeft.addEventListener('click', () => {
   slider_1.classList.add('slider_1-current-1');
