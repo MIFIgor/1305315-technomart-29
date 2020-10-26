@@ -34,16 +34,29 @@ const messageForm = messagePopup.querySelector('.form-message')
 const messageName = messagePopup.querySelector('.name');
 const messageEmail = messagePopup.querySelector('.email');
 
+let isStorageSupport = true;
+let storage = '';
+
+try {
+  storage = localStorage.getItem('login');
+} catch (err) {
+  isStorageSupport = false;
+}
+
 messageButton.addEventListener('click', function (evt) {
   evt.preventDefault();
-  //messagePopup.style.display='block';
-  messagePopup.classList.add('modal-show');  
+  messagePopup.classList.add('modal-show');
+  
+  if (storage) {
+    messagName.value = storage;
+    messageEmail.focus();
+  } else {
   messageName.focus();
+  }
 });
 
 messageClose.addEventListener('click', function (evt) {
   evt.preventDefault();
-   //messagePopup.style.display='none';
   messagePopup.classList.remove('modal-show'); 
   messagePopup.classList.remove('modal-error');
 });
@@ -51,14 +64,20 @@ messageClose.addEventListener('click', function (evt) {
 messageForm.addEventListener('submit', function (evt) {
   if (!messageName.value || !messageEmail.value) {
     evt.preventDefault();
+    messagePopup.classList.remove('modal-error');
+    messagePopup.offsetWidth;
     messagePopup.classList.add('modal-error');
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem('login', messageName.value) && localStorage.setItem('email', messageEmail.value);
+    }
   }
 });
 
 window.addEventListener('keydown', function (evt) {
   if (evt.key === 'Escape') {
     if (messagePopup.classList.contains('modal-show')) {
-      //messagePopup.style.display='none';
+      evt.preventDefault();
       messagePopup.classList.remove('modal-show');
       messagePopup.classList.remove('modal-error');
     }    
@@ -69,51 +88,31 @@ window.addEventListener('keydown', function (evt) {
 //----------Modal cart----->
 
 const cartPopup = document.querySelector('.modal-cart');
-const cartButton = document.querySelector('.show-block .buy');
+const cartButtons = document.querySelectorAll('.buy');
 const cartClose = cartPopup.querySelector('.modal-close');
 
-cartButton.addEventListener('click', (evt) => {
-  //cartPopup.style.display='block';
-  evt.preventDefault();
-  cartPopup.classList.add('modal-show');
-});
-cartClose.addEventListener('click', (evt) => {
-  //cartPopup.style.display='none';
-  evt.preventDefault();
-  cartPopup.classList.remove('modal-show');
-});
-window.addEventListener('keydown', (evt) => {
-  if (evt.key === 'Escape') {
-    if (cartPopup.classList.contains('modal-show')) {
-      cartPopup.classList.remove('modal-show');
-    }
-  }
-});*/
+for (let cartButton of cartButtons) {
 
-
-//---------Show block------------->
-
-const elems = document.querySelectorAll('.catalog-item');
-const showBlock = document.querySelector('.show-block');
-
-for (let elem of elems) {
-  elem.addEventListener('mouseover', () => {
-    elem.appendChild(showBlock);
-    elem.style.boxShadow='0px 4px 10px var(--dark-shadow);'
-    showBlock.style.position='absolute';
-    showBlock.style.left='0';
-    showBlock.style.top='0';
-    showBlock.style.cursor='pointer'
-    showBlock.style.zIndex='2';
-    showBlock.classList.remove('visually-hidden');
+  cartButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    cartPopup.classList.add('modal-show');
   });
-
-  elem.addEventListener('mouseout', () => {
-    showBlock.classList.add('visually-hidden');
+  cartClose.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    cartPopup.classList.remove('modal-show');
+  });
+  window.addEventListener('keydown', function (evt) {
+    if (evt.key === 'Escape') {
+      if (cartPopup.classList.contains('modal-show')) {
+        cartPopup.classList.remove('modal-show');
+      }
+    }
   });
 }
+*/
 
-/*
+
+
 //-----------Slider_1---------------->
 
 
@@ -151,6 +150,103 @@ btn2.addEventListener('click',  () => {
 	slider_1.classList.remove('slider_1-current-1');
 	btn2.classList.add('current');
 	btn1.classList.remove('current');
-});*/
+});
+
+
+//-------------Slider_2------------->
+
+
+let sliderDelivery = document.querySelector('.slider-delivery');
+let guarantee = document.querySelector('.guarantee');
+let credit  = document.querySelector('.credit');
+
+const currentButton = function () {
+  let buttons = document.querySelectorAll('.slider_2 button');
+    for (let button of buttons) {
+      if (button.classList.contains('current-button')) {
+        button.style.backgroundColor='var(--basic-white)';
+        button.style.color='var(--dark-grey)';
+      }
+      if (!button.classList.contains('current-button')) {
+        button.style.backgroundColor='var(--dark-grey)';
+        button.style.color='var(--basic-white)';
+      }
+
+      button.addEventListener('mouseover', function (evt) {
+        evt.preventDefault();
+        if (!button.classList.contains('current-button')) {
+          button.style.backgroundColor='var(--darken-grey)';
+          }
+      });
+      button.addEventListener('mouseout', function (evt) {
+        evt.preventDefault();
+        if (!button.classList.contains('current-button')) {
+          button.style.backgroundColor='var(--dark-grey)';
+          }
+      });      
+      button.addEventListener('focus', function (evt) {
+        evt.preventDefault();
+        if (button.classList.contains('current-button')) {
+          button.style.boxShadow='0px 4px 20px var(--dark-shadow)';
+        }
+        if (!button.classList.contains('current-button')) {
+          button.style.backgroundColor='var(--darken-grey)';
+        }
+      });
+      button.addEventListener('blur', function (evt) {
+        evt.preventDefault();
+        if (button.classList.contains('current-button')) {
+          button.style.boxShadow='none';
+        }
+        if (!button.classList.contains('current-button')) {
+          button.style.backgroundColor='var(--dark-grey)';
+        }
+      });
+    }
+};
+
+
+let elem1 = document.querySelector('.slider_2-list li:first-child');
+let elem2 = document.querySelector('.slider_2-list li:nth-child(2)');
+let elem3 = document.querySelector('.slider_2-list li:nth-child(3)');
+
+guarantee.addEventListener('click', (evt) => {
+  evt.preventDefault();
+	elem2.classList.add('current-slide');  
+  elem1.classList.remove('current-slide');
+  elem3.classList.remove('current-slide');
+
+  guarantee.classList.add('current-button');
+  sliderDelivery.classList.remove('current-button');
+  credit.classList.remove('current-button');
+
+  currentButton();
+});
+
+sliderDelivery.addEventListener('click', (evt) => {
+  evt.preventDefault();
+	elem1.classList.add('current-slide');  
+  elem2.classList.remove('current-slide');
+  elem3.classList.remove('current-slide');
+  
+  sliderDelivery.classList.add('current-button');
+  guarantee.classList.remove('current-button');
+  credit.classList.remove('current-button');
+
+  currentButton();
+});
+
+credit.addEventListener('click', (evt) => {
+  evt.preventDefault();
+	elem3.classList.add('current-slide');  
+  elem1.classList.remove('current-slide');
+  elem2.classList.remove('current-slide');
+
+  credit.classList.add('current-button');
+  guarantee.classList.remove('current-button');
+  sliderDelivery.classList.remove('current-button');
+
+  currentButton();
+});
 
 

@@ -6,10 +6,10 @@
     <meta name='keywords' content='строительные материалы, инструменты для ремонта'>
     <meta name='disctiption' content='Магазин строительных материалов и инструмента для ремонта'>    
     <title>HTML Academy: Техномарт</title>
-    <link rel='stylesheet'href='https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'>
     <link href='css/normalize.css'  rel='stylesheet'>
-    <link href='css/style.css' rel='stylesheet'>
+    <link href='css/style.min.css' rel='stylesheet'>
   </head>
   <body class='page-body'>
     <header class='main-header main-header-catalog'>
@@ -17,7 +17,6 @@
         <div class='user-navigation container'>
           <a class='catalog-logo' href='index.html'>
             <p class='user-logo'>Техномарт</p>
-            <!--<img src='img/logo.png' width='220' height='47' alt='Логотип магазина'>  -->
           </a>
           <form class='header-form' action='https://echo.htmlacademy.ru/' method='get'>
             <input class='search' type='text' name='search' placeholder='Поиск:'>
@@ -36,8 +35,9 @@
               <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
               <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
               </svg>
-              Корзина: 10</a>
-          <button class='order' type='button'>Офорить заказ</button>
+              <span>Корзина: 10</span>
+            </a>
+          <button class='order' type='button'>Оформить заказ</button>
         </div>
       </section>
       <section class='header-middle-catalog container'>
@@ -49,8 +49,8 @@
           </p>
         </div>
         <div class='contact'>
-          <p class='phone'><a href='tel:+7(812)555-05-55'><img src='img/icon-phone.svg' width='19' height='19' alt='user'>+7(812)555-05-55</a></p>
-          <p class='address'>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p class='phone'><a href='tel:+7(812)555-05-55'><img src='img/icon-phone.svg' width='19' height='19' alt='user'>+7 (812) 555-05-55</a></p>
+          <p class='address'>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class='catalog-person'>
           <p class='p-name'>
@@ -92,7 +92,7 @@
         <h2 class='catalog-title'>Перфораторы</h2>
         <ul class='perforator-list'>
           <li>
-            <a href='index.html'><img src='img/icon-home.svg'></a><img class='right-small' src='img/icon-right-small.svg' width='8' height='12' alt='Right-small'>
+            <a href='index.html'><img class='home' src='img/icon-home.svg' width='14' height='12' alt='Домик'></a><img class='right-small' src='img/icon-right-small.svg' width='8' height='12' alt='Right-small'>
           </li>
           <li>
             <a href='catalog.html'>Каталог</a><img class='right-small' src='img/icon-right-small.svg' width='8' height='12' alt='Right-small'>
@@ -127,7 +127,7 @@
                   </label>
                   <p>&mdash;</p>
                   <label class='max-price'>
-                    <input type='number' name='max-price' value='3000'>
+                    <input type='number' name='max-price' value='30000'>
                   </label>
                 </div>                
               </div>              
@@ -145,7 +145,7 @@
                   <label for='inter'>ИНТЕРСКОЛ</label>
                 </li>
                 <li class='filter-option filter-checkbox'>
-                  <input class='visually-hidden filter-input filter-input-checkbox' type='checkbox' name='MAKITA' id='makita' checked disabled>
+                  <input class='visually-hidden filter-input filter-input-checkbox' type='checkbox' name='MAKITA' id='makita' checked>
                   <label for='makita'>MAKITA</label>
                 </li>
                 <li class='filter-option filter-checkbox'>
@@ -180,19 +180,21 @@
           <section class='assortment'>
             <h2 class='visually-hidden'>Сортировка товаров</h2>       <!--hidden-->
             <h3 class='sort'>Сортировка:</h3>
-            <p class='prices'><span>По цене<span></p>
+            <p class='prices'><span>По цене</span></p>
             <p class='type'><span>По типу</span></p>
             <p class='func'><span>По функционалу</span></p>
             <div class='button-up-down'>
-              <button class='up' type='button'><svg aria-label='Up' width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.66241 10L0.162415 0H11.1624" fill=""/>
+              <button class='up' type='button'>
+                <svg aria-label='Up' width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.66241 10L0.162415 0H11.1624" fill=""/>
                 </svg>
-                </button>
-              <button class='down' type='button'><svg aria-label='Down' width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.66241 10L0.162415 0H11.1624" fill=""/>
+              </button>
+              <button class='down' type='button'>
+                <svg aria-label='Down' width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.66241 10L0.162415 0H11.1624" fill=""/>
                 </svg>
-                </button>
-              </div>
+              </button>
+            </div>
           </section>
 
           <section class='catalog'>
@@ -204,7 +206,11 @@
                   <p class='catalog-item-image'><img src='img/object.png' width='144' height='128' alt=''></p>
                 </a>
                 <p class='old-price'>30500 P.</p>
-                <p class='pentagon'>25500 P.</p>             
+                <p class='pentagon'>25500 P.</p>
+                <div class='show-block hidden-card'>
+                  <a href='#' class='buy' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></a>
+                  <a href='#' class='into-bookmarks' aria-label='Добавить в закладки'><span>В закладки</span></a>
+                </div>             
               </li>
               <li class='catalog-item'>
                 <a class='catalog-anchor' href='blank.html'>
@@ -213,6 +219,10 @@
                 </a>
                 <p class='old-price'>30500 P.</p>
                 <p class='pentagon'>25500 P.</p>
+                <div class='show-block hidden-card'>
+                  <a href='#' class='buy' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></a>
+                  <a href='#' class='into-bookmarks' aria-label='Добавить в закладки'><span>В закладки</span></a>
+                </div>
               </li>
               <li class='catalog-item'>
                 <a class='catalog-anchor' href='blank.html'>
@@ -221,8 +231,11 @@
                 </a>
                 <p class='old-price'>30500 P.</p>
                 <p class='pentagon'>25500 P.</p>
+                <div class='show-block hidden-card'>
+                  <a href='#' class='buy' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></a>
+                  <a href='#' class='into-bookmarks' aria-label='Добавить в закладки'><span>В закладки</span></a>
+                </div>
                 <div class='new'>New</div>         
-              </li>
               </li>
               <li class='catalog-item'>
                 <a class='catalog-anchor' href='blank.html'>
@@ -231,6 +244,10 @@
                 </a>
                 <p class='old-price'>25500 P.</p>
                 <p class='pentagon'>15500 P.</p>
+                <div class='show-block hidden-card'>
+                  <a href='#' class='buy' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></a>
+                  <a href='#' class='into-bookmarks' aria-label='Добавить в закладки'><span>В закладки</span></a>
+                </div>
                 <div class='new'>New</div>
               </li>
               <li class='catalog-item'>
@@ -240,6 +257,10 @@
                 </a>
                 <p class='old-price'>30500 P.</p>
                 <p class='pentagon'>25500 P.</p>
+                <div class='show-block hidden-card'>
+                  <a href='#' class='buy' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></a>
+                  <a href='#' class='into-bookmarks' aria-label='Добавить в закладки'><span>В закладки</span></a>
+                </div>
               </li>
               <li class='catalog-item'>
                 <a class='catalog-anchor' href='blank.html'>
@@ -248,6 +269,10 @@
                 </a>
                 <p class='old-price nothing'>12500 P.</p>  <!--hidden-->
                 <p class='pentagon'>12500 P.</p>
+                <div class='show-block hidden-card'>
+                  <a href='#' class='buy' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></a>
+                  <a href='#' class='into-bookmarks' aria-label='Добавить в закладки'><span>В закладки</span></a>
+                </div>
                 <div class='new'>New</div>
               </li>
               <li class='catalog-item'>
@@ -257,6 +282,10 @@
                 </a>
                 <p class='old-price'>22500 P.</p>
                 <p class='pentagon'>15500 P.</p>
+                <div class='show-block hidden-card'>
+                  <a href='#' class='buy' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></a>
+                  <a href='#' class='into-bookmarks' aria-label='Добавить в закладки'><span>В закладки</span></a>
+                </div>
                 <div class='new'>New</div>
               </li>
               <li class='catalog-item'>
@@ -266,6 +295,10 @@
                 </a>
                 <p class='old-price'>30500 P.</p>
                 <p class='pentagon'>25500 P.</p>
+                <div class='show-block hidden-card'>
+                  <a href='#' class='buy' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></a>
+                  <a href='#' class='into-bookmarks' aria-label='Добавить в закладки'><span>В закладки</span></a>
+                </div>
               </li>
               <li class='catalog-item'>
                 <a class='catalog-anchor' href='blank.html'>
@@ -274,13 +307,13 @@
                 </a>
                 <p class='old-price nothing'>12500 P.</p>      <!--hidden-->
                 <p class='pentagon'>12500 P.</p>
+                <div class='show-block'>
+                  <a href='#' class='buy' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></a>
+                  <a href='#' class='into-bookmarks' aria-label='Добавить в закладки'><span>В закладки</span></a>
+                </div>
                 <div class='new'>New</div>
               </li>
-            </ul>
-            <div class='show-block hidden-card visually-hidden'>
-              <a href='#' class='buy' aria-label='Добавить товар в корзину'><img class='hidden-cart' src='img/icon-cart.svg' width='15' height='15' alt='Корзина'><span>Купить</span></a>
-              <a href='#' class='into-bookmarks' aria-label='Добавить в закладки'><span>В закладки</span></a>
-            </div>
+            </ul>            
           </section>
           <section class='pages-button'>
             <ul class='pagination-list'>
@@ -297,7 +330,7 @@
         <div class='container'>
           <h2 class='two-words'>Пара слов о перфораторах</h2>
           <div class='catalog-text'>
-            <p>Перфоратор-универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
+            <p>Перфоратор &mdash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
             <p>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и 
             отбойного молотка.
             </p> 
@@ -310,11 +343,8 @@
     
 
     <footer class='page-footer main-footer'>
-      <section class='footer-top container'>
-        
-          <div class='footer-user-logo'>Техномарт</div>
-          <!--<img src='img/logo.png' width='220' height='68' alt='Логотип'>  -->
-        
+      <section class='footer-top container'>        
+        <div class='footer-user-logo'>Техномарт</div>        
         <ul class="footer-list">
           <li class='footer-item'><a href='index.html'>Компания</a></li>
           <li class='footer-item'><a href='blank.html'>Новости</a></li>
@@ -325,8 +355,8 @@
       </section>
       <section class='footer-middle container'>
         <div class='footer-contact'>
-          <p class='footer-address'>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p class='footer-phone'>+7(812)555-05-55</p>
+          <div class='footer-address'>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
+          <div class='footer-phone'>+7 (812) 555-05-55</div>
         </div>
         <ul class='footer-goods'>
           <li class='footer-goods-item'><a href='blank.html'>Материалы</a></li>
@@ -338,7 +368,7 @@
       <section class='footer-bottom'>
         <div class='container container-bottom'>
           <div class='footer-copyright'>
-            <span>&#169; 2010-2019 Компания &laquo;Техномарт&raquo;</span>
+            <span>&#169; 2010&mdash;2019 Компания &laquo;Техномарт&raquo;</span>
             <span>Все права защищены</span>
           </div>
           <ul class='social-list'>
@@ -353,10 +383,10 @@
             </li>
           </ul>
           <div class='feedback'>
-            <p class='feedback-link'>Обратная связь:<br>
+            <p class='feedback-link'>Обратная связь:
               <a class='email-link' href='mailto:mail@htmlacademy.ru'>mail@htmlacademy.ru</a>
             </p>
-            <p class='feedback-made'>Разработано-<br><a class='site-link' href='https://htmlacademy.ru/intensive/htmlcss'>htmlacademy.ru</a></p>
+            <p class='feedback-made'>Разработано -<br><a class='site-link' href='https://htmlacademy.ru/intensive/htmlcss'>htmlacademy.ru</a></p>
           </div>
         </div>
       </section>
@@ -364,7 +394,7 @@
 
     <!--Modal cart  Корзина-->
 
-    <section class='modal modal-cart'>
+    <section class='modal modal-cart' aria-label='Модальное окно Корзина'>
       <h2 class='visually-hidden'>Корзина</h2>   <!--hidden-->
       <div class='wrapper-cart'>      
         <img class='icon-mark' src='img/icon-mark.svg' width='66' height='66' alt='Зеленый круг с белой "птичкой"'>
@@ -377,8 +407,6 @@
       <button class='modal-close' type='button' aria-label='Закрыть'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'></button>
     </section>
 
-    <!--<script src='js/modal-win.js'></script>-->
-    <script src='js/catalog.js'></script>
-    <srcipt src='js/modal-win-catalog.js'></srcipt>
+    <script src='js/modal_win_catalog.js'></script>
   </body>
 </html>

@@ -7,11 +7,11 @@
     <meta name='keywords' content='строительные материалы, инструменты для ремонта'>
     <meta name='disctiption' content='Магазин строительных материалов и инструмента для ремонта'>    
     <title>HTML Academy: Техномарт</title>
-    <link rel='stylesheet'href='https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap'>
     <link href='css/normalize.css'  rel='stylesheet'>
-    <link href='css/style.css' rel='stylesheet'>
+    <link href='css/style.min.css' rel='stylesheet'>
     <style>
       
     </style>
@@ -44,8 +44,9 @@
             <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
             <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
             </svg>
-            <span>Корзина: 0</span></a>
-          <button class='order' type='button'>Офорить заказ</button> 
+            <span>Корзина: 0</span>
+          </a>
+          <button class='order' type='button'>Оформить заказ</button> 
         </div>
       </section>
       <section class='header-middle container'>
@@ -54,11 +55,11 @@
           <p>Интернет-магазин
           строительных материалов<br>
           и инструментов для ремонта
-        </p>
+          </p>
         </div>
         <div class='contact'>
-          <p class='phone'><a href='tel:+7(812)555-05-55'><img src='img/icon-phone.svg' width='19' height='19' alt='user'>+7(812)555-05-55</a></p>
-          <p class='address'>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p class='phone'><img src='img/icon-phone.svg' width='19' height='19' alt='user'><a href='tel:+7(812)555-05-55'>+7 (812) 555-05-55</a></p>
+          <p class='address'>г. Санкт-Петербург, ул.Б. Конюшенная, д. 19/8</p>
         </div>
         <p class='p-login-link'><a class='login-link' href='blank.html'><svg class='enter' aria-hidden='true' width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill=""/>
@@ -88,12 +89,13 @@
           <li class='goods-item material'>            
             <h3>Материалы</h3>
             <img src='img/icon-1.svg' width='44' height='65' alt='Ведро'>
-            <p><a class='goods-button' href='blank.html'>На любой вкус</a></p>            
+            <p><a class='goods-button' href='blank.html'>На любой вкус</a></p>
+            <div class='new'>New</div>            
           </li>
           <li class='goods-item tools'>            
             <h3>Инструмент</h3>
             <img src='img/icon-2.svg' width='75' height='61' alt='Дрель'>
-            <p><a class='goods-button' href='blank.html'>На любой случай</a></p>                        
+            <p><a class='goods-button' href='blank.html'>На все случаи</a></p>                        
           </li>
           <li class='goods-item equipment'>            
             <h3>Техника</h3>
@@ -102,7 +104,7 @@
           </li>
           <li class='goods-item discount'>            
             <h3>Скидки 50%</h3>
-            <img src='img/icon-4.svg' width='' height='' alt='Корзина'>
+            <img src='img/icon-4.svg' width='59' height='72' alt='Корзина'>
             <p><a class='goods-button' href='blank.html'>На 350 товаров</a></p>           
           </li>
           <li class='goods-item delivery'>
@@ -114,16 +116,16 @@
             <span class='icon-left'></span>
             <span class='icon-right'></span>        
             <div class='slider_1-controls'>
-              <button class='btn-1 current' type='button' arial-label='Первый слайд'></button>
-              <button class='btn-2' type='button' arial-label='Второй слайд'></button>
+              <button class='btn-1 current' type='button' aria-label='Первый слайд'></button>
+              <button class='btn-2' type='button' aria-label='Второй слайд'></button>
             </div>
-            <a href='catalog.html'class='button-link button-slider_1'>Открыть каталог</a>            
+            <a href='catalog.html' class='button-link button-slider_1'>Открыть каталог</a>            
           </li>          
         </ul>       
       </section>
 
       <section class='popular-goods container'>        
-        <h2>Популярные товары</h2>
+        <h2>Популярные товары:</h2>
         <p><a class='button-link popular-button' href='#'>Все популярные товары</a></p>
         <ul class='popular-list'>
           <li class='popular-item'>
@@ -222,8 +224,8 @@
                 <div class='wrapper-inner-inner-3'>
                   <h2 class='second'>Кредит</h2>
                   <p class='credit-text'>
-                    Залезть в долговую яму стало проще!
-                    Кредитные консультанты придут к вам на помощь.                    
+                    Залезть в долговую яму стало проще!<br>
+                    Кредитные консультанты придут вам на помощь.                    
                   </p>
                   <a href='#' class='button-link button-credit' aria-label='Оформление заявки'>Отправить заявку</a>
                 </div>        
@@ -274,7 +276,7 @@
       <section class='footer-middle container'>
         <div class='footer-contact'>
           <div class='footer-address'>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
-          <div class='footer-phone'>+7(812)555-05-55</div>
+          <div class='footer-phone'>+7 (812) 555-05-55</div>
         </div>
         <ul class='footer-goods'>
           <li class='footer-goods-item'><a href='blank.html'>Материалы</a></li>
@@ -286,7 +288,7 @@
       <section class='footer-bottom'>
         <div class='container container-bottom'>
           <div class='footer-copyright'>
-            <span>&#169; 2010-2019 Компания &laquo;Техномарт&raquo;</span>
+            <span> &#169; 2010&mdash;2019 Компания &laquo;Техномарт&raquo;</span>
             <span>Все права защищены</span>
           </div>
           <ul class='social-list'>
@@ -304,7 +306,7 @@
             <p class='feedback-link'>Обратная связь:
               <a class='email-link' href='mailto:mail@htmlacademy.ru'>mail@htmlacademy.ru</a>
             </p>
-            <p class='feedback-made'>Разработано-<br><a class='site-link' href='https://htmlacademy.ru/intensive/htmlcss'>htmlacademy.ru</a></p>
+            <p class='feedback-made'>Разработано -<br><a class='site-link' href='https://htmlacademy.ru/intensive/htmlcss'>htmlacademy.ru</a></p>
           </div>
         </div>
       </section>
@@ -312,7 +314,7 @@
 
     <!--Modal windows-->
     
-    <section class='modal modal-message'>
+    <section class='modal modal-message' aria-label='Модальное окно сообщения'>
       <h2 class='visually-hidden'>Напишите нам</h2> <!--hidden-->
       <form class='form-message' action='https://echo.htmlacademy.ru' method='get'>
         <div class='wrapper-message container-inner'>
@@ -335,14 +337,12 @@
     </section>
 
 
-    <section class='modal modal-maps'>
+    <section class='modal modal-maps' aria-label='Модальное окно Карты'>
       <h2 class='visually-hidden'>Карта</h2>         <!--hidden-->
-      <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.432478059941!2d30.32330650958949!3d59.93864459953058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1602047121948!5m2!1sru!2sru' width='943' height='449' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0' title='Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург'></iframe>
+      <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.432478059941!2d30.32330650958949!3d59.93864459953058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1602047121948!5m2!1sru!2sru' width='943' height='449' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0' title='Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург'></iframe>
       <button class='modal-close' type='button' aria-label='Закрыть'><img src='img/icon-close.svg' width='21' height='21' alt='cross-red'></button>
     </section>
 
-    <script src='js/slider_1.js'></script>
-    <script src='js/service.js'></script>
-    <script src='js/modal-win.js'></script>
+    <script src='js/modal-win.min.js'></script>
   </body>
 </html>
