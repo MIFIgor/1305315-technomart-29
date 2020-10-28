@@ -170,7 +170,8 @@ const currentButton = function () {
       if (!button.classList.contains('current-button')) {
         button.style.backgroundColor='var(--dark-grey)';
         button.style.color='var(--basic-white)';
-      }
+        button.style.boxShadow='0px 1px 0px var(--darken-grey), inset 0px 1px 0px var(--inset-shadow)';
+      }      
 
       button.addEventListener('mouseover', function (evt) {
         evt.preventDefault();
@@ -231,6 +232,7 @@ sliderDelivery.addEventListener('click', (evt) => {
   
   sliderDelivery.classList.add('current-button');
   guarantee.classList.remove('current-button');
+  guarantee.style.boxShadow='0px 1px 0px var(--basic-white)';
   credit.classList.remove('current-button');
 
   currentButton();
