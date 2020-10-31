@@ -435,7 +435,6 @@ h3 {
 .phone a:focus {
   outline: none;
   text-decoration: none;
-  border: 1px solid var(--basic-red);
 }
 
 .phone img {
